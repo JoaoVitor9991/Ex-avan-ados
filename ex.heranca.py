@@ -3,10 +3,10 @@ class Veiculo:
         self.marca = marca
         self.modelo = modelo
 
-    def combustivel(self):
+    def tipo_combustivel(self):
         return "Desconhecido"
 
-    def passageiros(self):
+    def capacidade_passageiros(self):
         return 0
 
 
@@ -16,10 +16,10 @@ class Carro(Veiculo):
         super().__init__(marca, modelo)
         self.tipo = "Carro"
 
-    def combustivel(self):
+    def tipo_combustivel(self):
         return "Gasolina"
 
-    def passageiros(self):
+    def capacidade_passageiros(self):
         return 5
 
 
@@ -29,10 +29,10 @@ class Moto(Veiculo):
         super().__init__(marca, modelo)
         self.tipo = "Moto"
 
-    def combustivel(self):
+    def tipo_combustivel(self):
         return "Gasolina"
 
-    def passageiros(self):
+    def capacidade_passageiros(self):
         return 2
 
 
@@ -42,15 +42,15 @@ class Caminhao(Veiculo):
         super().__init__(marca, modelo)
         self.tipo = "Caminhão"
 
-    def combustivel(self):
+    def tipo_combustivel(self):
         return "Diesel"
 
-    def passageiros(self):
+    def capacidade_passageiros(self):
         return 2
 
 
 
-def veiculos():
+def demonstrar_veiculos():
     veiculos = [
         Carro("Ford", "Fiesta"),
         Moto("Yamaha", "MT-07"),
@@ -61,10 +61,10 @@ def veiculos():
         print(f"Tipo: {veiculo.tipo}")
         print(f"Marca: {veiculo.marca}")
         print(f"Modelo: {veiculo.modelo}")
-        print(f"Tipo de Combustível: {veiculo.combustivel()}")
-        print(f"Capacidade de Passageiros: {veiculo.passageiros()}")
+        print(f"Tipo de Combustível: {veiculo.tipo_combustivel()}")
+        print(f"Capacidade de Passageiros: {veiculo.capacidade_passageiros()}")
         print("=" * 30)
 
 
 
-veiculos()
+demonstrar_veiculos()
